@@ -67,7 +67,7 @@ k_2     = var(14)*43.25;% transition A3 to A2 rate constant, 1/sec
 k3      = var(15)*73.698; % transition A3 to P rate constant, 1/sec
 alpha1  = 10.0; % Stretch sensing parameter for k1 and k?1, 1/um
 alpha2  = 9.1; % Stretch sensing parameter for k2 and k?2, 1/um
-alpha3  = var(16)*59.3; % Stretch sensing parameter for k3, 1/um
+alpha3  = 0.1*59.3; % Stretch sensing parameter for k3, 1/um
 s3      = 9.9e-3;  % Strain at which k3 is minimum, um
 
 % ka      = var(9)*681.1559; % myosin-actin attach rate constant, 1/sec
@@ -184,7 +184,8 @@ dNp = - Jon + Joff;
 
 %% transitions between super relaxed state and non relaxed state
 
-dU_NR = k1_SR * ( 1 + kforce * (F_XB + F_passive)) * U_SR - k2_SR * U_NR;
+% dU_NR = k1_SR * ( 1 + kforce * (F_XB + F_passive)) * U_SR - k2_SR * U_NR;
+dU_NR = k1_SR * ( 1 + kforce * F_XB ) * U_SR - k2_SR * U_NR;
 
 dYdT = [dp1_0; dp1_1; dp1_2; dp2_0; dp2_1; dp2_2; dp3_0; dp3_1; dp3_2; dNp; dSL; dU_NR];
 

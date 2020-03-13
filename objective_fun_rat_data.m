@@ -13,7 +13,7 @@ function sum_error =  objective_fun_rat_data(var,Data,flag_plot)
    eRT50_freq = [2.6  2.2  1.9  1.5  1.9  1.3  1.3  1.3  1.2];
 
 %% Data from XB parameters used for the mean sham rat
-% 
+
 %     Fmax_data = [31.97 53.06 73.53 92.25];
 %     TTP_data  = [44 43 43 43] ; 
 %     RT50_data = [25.36 26.42 27.47 28.89];
@@ -311,7 +311,7 @@ end
    if sum_error > - 60
         [hill_19 Ca50_19 hill_23 Ca50_23]= getpCa50 (var);  
         error_Ca50 = Ca50_23 - Ca50_19;
-       if (hill_19 > 6.5) || (hill_23 > 6.5) || (error_Ca50 <0.1) || (hill_19 < 4.0) || (hill_23 < 4.0) 
+       if (hill_19 > 7) || (hill_23 > 7) || (error_Ca50 <0.09) || (hill_19 < 4.0) || (hill_23 < 4.0) 
             sum_error = sum_error - 5000;
        end    
    end

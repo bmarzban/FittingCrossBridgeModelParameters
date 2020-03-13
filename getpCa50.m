@@ -19,7 +19,7 @@ Pi = 1; % mM
 kstiff1 = var(1)*20000/7.5; % kPa/um (9/5 BM)
 kstiff2 = var(1)*375000/7.5; % kPa/um (9/5 BM)
 dr = 0.01; % Power-stroke Size; Units: um
-k_passive = var(2)* 40/7.5; % mN / mm^2 / micron
+k_passive = var(2)* 10; % mN / mm^2 / micron
 Kse = 1400;
 SLset = [1.90,2.3];
 % Defining the time vector

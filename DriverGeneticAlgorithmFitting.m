@@ -2,10 +2,10 @@
 clear; close all; clc;
 % define the variables to be tuned and their corresponding numbers as
 % following: 
-nvar = 16; 
-Mutation_rate = 0.3;
+nvar = 15; 
+Mutation_rate = 0.25;
 Cross_over_rate = 0.7;
-Population_num = 100; %%%even numbers
+Population_num = 40; %%%even numbers
 Max_gen = 100;
 Elitism_rate = 0.2;
 % plotting while the optimization runs
@@ -19,9 +19,11 @@ variables_max_rang = ones(1,nvar) + 1;   %[max_varizbale_1 max_variable_2 ...]
 initial_population = zeros(Population_num,nvar);
 % % 
 % variables_min_rang(10:11) = [0.5];
-variables_max_rang(10:11) =[5];
-variables_min_rang(12:14) = [0.9];
-variables_max_rang(12:14) =[1.1];
+variables_max_rang(10:11) =[7];
+variables_min_rang(12:14) = [0.99];
+variables_max_rang(12:14) =[1.01];
+variables_min_rang(4:8) = [0.2];
+variables_max_rang(4:8) =[10];
 % good_individual_3 = [1.8685    0.9927    1.9746*1    1.0887*0.99    1.7791    1.5887    1.6376    0.5657    1.8738    1.9557    1.6768    1.7204];%139
 % good_individual_1 = [1.18783129356751*1.43,0.755063156386634,0.608302745025594,2.28505848337249,2.83554452432431,2.36363384319356,0.908906573915146,1.81657209630941,1.24834053130923,2.0,1.14406033829670,1.00373905093119,0.938658804993310,1.60483521822591 ,2 ,2 ]
 % good_individual_1 = [ 0.9774*1.32    1.5817    0.9128*1.4    1.6309    1.4893    0.6127    1.5998*0.9    1.4116*1.12    0.5402    1.8157    1.7444    1.0733    1.1222    1.7827    2 0.6905]
